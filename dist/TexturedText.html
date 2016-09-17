@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TexturedText</title>
+</head>
+<body>
+<h1 id="TexturedText">TexturedText</h1>
+<script src="js/TexturedText.js"></script>
+<script>
+    new TexturedText(
+            document.getElementById("TexturedText"),
+            {
+                "textureSrc": "./images/det_cont_fon.jpg",
+                "offsetX": 150,
+                "offsetY": 150
+            }
+    );
+</script>
+<link href="https://fonts.googleapis.com/css?family=Molle:400i" rel="stylesheet"/>
+<style>
+    #TexturedText{
+        font-family: 'Molle', cursive;
+    }
+</style>
+</body>
+</html>
