@@ -1,19 +1,57 @@
-# jQuery Textured Text
-This plugin allows you to create texts with textures like on the website http://www.wisecom.ru/
-The plugin hides the text and substitutes instead the texture. Texture is prepared automatically on the basis of the text, background and font settings. Also the generated picture is stored on the server for older browsers could emulate the behavior.
-### Example of usage
+# TexturedText
+JavaScript plugin for textured text.
+## Build
+The repository contains pre-compiled files, but if you want to add your files and compile, then run the following commands in the repository folder.
+* npm install
+* npm run production
+
+or
+
+* npm run development
+
+The build required NodeJs version 6 or higher.
+
+## Usage
+```
+//If you use TypeScript in your project.
+import TexturedText from TexturedText.ts
+    
+//If you use JavaScript in your project.
+let window = global;
+request("TexturedText.js");
+let TexturedText = window["TexturedText"];
+    
+//If you just want to use JavaScript as usual.
+<script src="js/TexturedText.js"></script>
+    
+//Then call just TexturedText class with parameters.
+new TexturedText(<domTextElement>,<objParams>);
+```
+### Parameters
+```
+- domTextElement
+    The DOM element with text
+        
+- objParams
+    The parameters are describing the text textures.
+    
+    - textureSrc
+        The path to texture image
+        
+    - offsetX
+        The image texture x offset
+        
+    - offsetY
+        The image texture y offset
+```
+## Example
 ```javascript
-$('.phone_top').imgtotext(
-	{
-		'x':'285',
-		'y':'132',
-		'img':'text_to_img/det_cont_fon.jpg',
-		'family':'benderblack_italic',
-		'size':'40',
-		'style':'normal',
-		'weight':'normal',
-		'text_shadow':'on',
-		'text_transform':'upper'
-	}
-);
-```		
+    new TexturedText(
+            document.getElementById("TexturedText"),
+            {
+                "textureSrc": "./images/det_cont_fon.jpg",
+                "offsetX": 150,
+                "offsetY": 150
+            }
+    );
+```
