@@ -1,6 +1,6 @@
 {
   "name": "TexturedText",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "JavaScript plugin for textured text",
   "main": "dist/js/index.js",
   "scripts": {
