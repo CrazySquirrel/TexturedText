@@ -4,8 +4,8 @@
     "sourceMap": false,
     "inlineSourceMap": true
   },
-  "files": [
-    "./typings/index.d.ts",
-    "./src/ts/TexturedText.ts"
+  "exclude": [
+    "node_modules",
+    "typings"
   ]
 }
